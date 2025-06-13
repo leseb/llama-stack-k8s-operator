@@ -104,3 +104,7 @@ jobs:
           path: |
             *.log
           retention-days: 1
+
+      - name: Setup tmate session
+        if: ${{ always() }}
+        uses: mxschmitt/action-tmate@v3
